@@ -1,0 +1,112 @@
+$heightCard: calc((100vw / 2) - 140px);
+
+.productSection{
+  width: 100vw;
+  display: flex;
+
+  .product{
+    background-color: white;
+    width: 50%;
+    height: $heightCard;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    img{
+      margin-top: calc(($heightCard / 2) - 140px - 2rem);
+      margin-bottom: 20px;
+      display: block;
+      width: 120px;
+      height: 120px;
+    }
+
+    h3{
+      font-family: "Ubuntu";
+      font-weight: 400;
+      font-size: 2rem;
+    }
+
+    hr{
+      width: 60px;
+      border: none;
+      border-top: 1px solid #a5a4a4;
+      margin: 20px 0;
+    }
+
+    p{
+      max-width: 250px;
+      text-align: center;
+    }
+
+    span{
+      margin-top: 40px;
+      font-family: "Ubuntu";
+      font-weight: 500;
+      font-size: .8rem;
+      letter-spacing: 4px;
+      cursor: pointer;
+      
+      .arrow{
+        margin-right: 8px;
+        transition: all 100ms ease;
+      }
+
+      &:hover .arrow{ margin-right: 20px }
+    }
+  }
+
+  .backgroundImage{
+    width: 50%;
+    height: $heightCard;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(75%);
+    }
+
+    button{
+      font-family: "Ubuntu";
+      padding: 20px 40px;
+      background: none;
+      border: 2px solid white;
+      color: white;
+      letter-spacing: 2px;
+      font-size: 1rem;
+      z-index: 1;
+    }
+
+    .figure{
+      height: 20px;
+      width: 10px;
+      background-color: white;
+      position: absolute;
+      top: calc(($heightCard / 2) - 10px);
+    }
+  }
+
+  &.left{
+    flex-direction: row;
+    .backgroundImage > .figure{
+      left: 0;
+      clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+    }
+  }
+  
+  &.right{
+    flex-direction: row-reverse;
+    .backgroundImage > .figure{
+      right: 0;
+      clip-path: polygon(100% 0%, 0% 50%, 100% 100%);
+    }
+  }
+}

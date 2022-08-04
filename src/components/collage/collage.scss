@@ -1,0 +1,18 @@
+#collage{
+  width: 100%;
+
+  .container{
+    width: 540px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+
+    img{
+      padding: 1px;
+      box-sizing: border-box;
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+    }
+  }
+}

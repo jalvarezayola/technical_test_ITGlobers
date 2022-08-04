@@ -1,0 +1,99 @@
+header{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  padding: 30px 40px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  background: rgb(0,0,0);
+  background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.75) 100%);
+
+  .logo{
+    min-width: 250px;
+  
+    img{
+      height: 60px;
+    }
+  }
+
+  .products{
+    display: flex;
+
+    div{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 20px 10px;
+      border-right: 1px solid rgba(255, 255, 255, .4);
+      cursor: pointer;
+
+      img{ height: 30px }
+
+      span{
+        font-family: "Ubuntu";
+        letter-spacing: 1px;
+        font-weight: 600;
+        color: white;
+        margin-top: 10px;
+      }
+
+      &:last-child{ border-right: none }
+    }
+  }
+
+  .userOptions{
+    min-width: 250px;
+    text-align: right;
+
+    span{
+      font-family: "Ubuntu";
+      font-size: .7rem;
+      letter-spacing: 2px;
+      font-weight: 400;
+      color: white;
+      padding: 8px;
+      cursor: pointer;
+      position: relative;
+      
+      img{
+        height: 8px;
+        margin-left: 4px;
+      }
+
+      &:first-child{
+        border-right: 1px solid rgba(255, 255, 255, .4);
+      }
+
+      ul{
+        position: absolute;
+        list-style: none;
+        width: 140px;
+        height: 64px;
+        right: 0;
+        bottom: -64px;
+
+        li{
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          height: 32px;
+          padding: 0 8px;
+          box-sizing: border-box;
+          font-size: .8rem;
+          transition: all 100ms ease;
+
+          &:hover{
+            background-color: rgba(255, 255, 255, .25);
+          }
+        }
+
+        &.hidden li{
+          height: 0;
+          overflow: hidden;
+        }
+      }
+    }
+  }
+}

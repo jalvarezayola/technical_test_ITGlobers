@@ -1,0 +1,26 @@
+.aditionalSection{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .header{
+    margin-top: 60px;
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .sectionName{
+      color: #a5a4a4;
+      letter-spacing: 1px;
+      font-size: .9rem;
+      font-family: "Ubuntu";
+    }
+  
+    h2{
+      font-family: "Ubuntu";
+      font-weight: 200;
+      font-size: 2.5rem;
+    }
+  }
+}
